@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var (・ω・): UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func tapButton(sender: UIButton) {
+        if let url = URL(string: "https://github.com/WataruSuzuki/StudyAppium") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 
 }
 
