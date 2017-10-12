@@ -27,6 +27,10 @@ module Sample_iOS
     #
     # el1 = driver.find_elements(:accessibility_id, "Hoge")
     # el1.click
+    el1 = driver.find_elements(:accessibility_id, "(・ω・)")
+    el1.click
+    el2 = driver.find_elements(:accessibility_id, "◀︎ Sample_iOS")
+    el2.click
     #
     # driver_quit
     puts 'Tests Succeeded!'
