@@ -23,13 +23,16 @@ Appium::Driver.new(desired_caps, true).start_driver
 
 module Sample_iOS
   module IOS
-    # Appium.promote_singleton_appium_methods Sample_iOS
+    Appium.promote_singleton_appium_methods Sample_iOS
     #
-    # el1 = driver.find_elements(:accessibility_id, "Hoge")
-    # el1.click
-    el1 = driver.find_elements(:accessibility_id, "(・ω・)")
+    el1 = find_element(:accessibility_id, "(・ω・)")
     el1.click
-    el2 = driver.find_elements(:accessibility_id, "◀︎ Sample_iOS")
+
+    def find_id id
+      wait { find_element(:id, "◀︎ Sample_iOS") }
+    end
+
+    el2 = find_element(:accessibility_id, "◀︎ Sample_iOS")
     el2.click
     #
     # driver_quit
